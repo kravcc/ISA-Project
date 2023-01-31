@@ -1,6 +1,7 @@
 # Síťové aplikace a správa sítí – ISA
 ## Čtečka novinek ve formátu Atom s podporou TLS
 #### Autor: Marina Kravchuk (xkravc02) 14.11.2022
+#### 12.5/20
 ---
 ## Zadání
  Napište program feedreader, který bude vypisovat informace uvedené ve stažených zdrojích (feed) ve formátu Atom a RSS. Program po spuštění stáhne zadané zdroje a na standardní výstup vypíše informace požadované uživatelem (např. názvy článků).
