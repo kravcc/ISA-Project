@@ -1,8 +1,40 @@
-# ISA-Project
-Čtečka novinek ve formátu Atom a RSS s podporou TLS
+# Síťové aplikace a správa sítí – ISA
+## Čtečka novinek ve formátu Atom s podporou TLS
+#### Autor: Marina Kravchuk (xkravc02) 14.11.2022
+---
+## Zadání
+ Napište program feedreader, který bude vypisovat informace uvedené ve stažených zdrojích (feed) ve formátu Atom a RSS. Program po spuštění stáhne zadané zdroje a na standardní výstup vypíše informace požadované uživatelem (např. názvy článků).
 
-Napište program feedreader, který bude vypisovat informace uvedené ve stažených zdrojích (feed) ve formátu Atom a RSS 2.0. Pro RSS se řiďte dokumentací odkazovanou níže. Program po spuštění stáhne zadané zdroje a na standardní výstup vypíše informace požadované uživatelem (např. názvy článků).
+Implementovano v jazyce C
 
-Při vytváření programu je povoleno použít hlavičkové soubory pro práci se sokety a další obvyklé funkce používané v síťovém prostředí (jako je netinet/*, sys/*, arpa/* apod.), knihovnu pro práci s vlákny (pthread), signály, časem, stejně jako standardní knihovnu jazyka C (varianty ISO/ANSI i POSIX), C++ a STL. Pro práci s daty ve formátu XML je doporučená knihovna libxml2, případně jiné knihovny dostupné na serveru merlin a eva. Pro práci s TLS je doporučená knihovna openssl, případně jiné knihovny dostupné na serveru merlin a eva. Pro práci s XML a TLS můžete použít i jiné knihovny, musí však být jasně označeny, že jde o převzatý kód a musí být součástí odevzdávaného archivu. Jiné knihovny nejsou povoleny.
+---
 
-(12.5 bodu z 20)
+## Použití programu:
+feedreader <URL | -f <feedfile>> [-c <certfile>] [-C <certaddr>] [-T] [-a] [-u] [-h]
+
+##### Popis jednotlivých parametrů:
+
+URL				Adresa URL, jejiž feedy se mají načíst a zpracovat. Musí začínat http:// či https://. Za hostitelem je možné zadat explicitní port uvozený dvojtečkou.
+-f feedfile		Cesta k souboru feedfile obsahujícího více adres URL s feedy, které se mají načíst a zpracovat.
+-c certfile		Cesta k souboru s certifikáty pro ověření důvěryhodnosti.
+-C certaddr		Cesta k adresáři s certifikáty pro ověření důvěryhodnosti.
+-T				Zobrazit časové údaje u položek feedu.
+-a				Zobrazit informace o autorovi u položek feedu.
+-u				Zobrazit asociovanou adresu u položky feedu.
+-h				Zobrazit nápovědu k programu.
+---
+
+## Příklad spuštění:
+
+./feedreader 'https://what-if.xkcd.com/feed.atom' -u -T
+
+## Seznam odevzdaných souborů:
+- `Makefile`
+- `feefreader.c`
+- `args_parser.c` a `args_parser.h`
+- `feed_parser.c` a `feed_parser.h`
+- `url_parser.c` a `url_parser.h`
+- `xml_parser.c` a `xml_parser.h`
+- `downloader.c` a `downloader.h`
+- `README.md`
+- `manual.pdf`
