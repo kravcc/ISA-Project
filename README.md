@@ -15,13 +15,13 @@ feedreader <URL | -f <feedfile>> [-c <certfile>] [-C <certaddr>] [-T] [-a] [-u] 
 ##### Popis jednotlivých parametrů:
 
 URL				Adresa URL, jejiž feedy se mají načíst a zpracovat. Musí začínat http:// či https://. Za hostitelem je možné zadat explicitní port uvozený dvojtečkou.
--f feedfile		Cesta k souboru feedfile obsahujícího více adres URL s feedy, které se mají načíst a zpracovat.
--c certfile		Cesta k souboru s certifikáty pro ověření důvěryhodnosti.
--C certaddr		Cesta k adresáři s certifikáty pro ověření důvěryhodnosti.
--T				Zobrazit časové údaje u položek feedu.
--a				Zobrazit informace o autorovi u položek feedu.
--u				Zobrazit asociovanou adresu u položky feedu.
--h				Zobrazit nápovědu k programu.
+- f feedfile		Cesta k souboru feedfile obsahujícího více adres URL s feedy, které se mají načíst a zpracovat.
+- c certfile		Cesta k souboru s certifikáty pro ověření důvěryhodnosti.
+- C certaddr		Cesta k adresáři s certifikáty pro ověření důvěryhodnosti.
+- T				Zobrazit časové údaje u položek feedu.
+- a				Zobrazit informace o autorovi u položek feedu.
+- u				Zobrazit asociovanou adresu u položky feedu.
+- h				Zobrazit nápovědu k programu.
 ---
 
 ## Příklad spuštění:
